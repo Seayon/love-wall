@@ -1,0 +1,162 @@
+<template name="index$7d175291">
+  <view class="_div data-v-0f2ac961">
+    <view class="_section data-v-0f2ac961 header">
+      <view class="_div data-v-0f2ac961 header-banner">
+        <view wx:key="index" key="{{index}}" hidden="{{!(isBannerShow==index)}}" wx:for="{{headBg}}" wx:for-index="index" wx:for-item="x" class="_div data-v-0f2ac961" style=" {{('background-image:' + 'url(' + x.src + ')' + ';')}}"></view>
+      </view>
+      <view class="_ul data-v-0f2ac961 header-ul">
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{headUl}}" wx:for-index="index" wx:for-item="x" class="_li data-v-0f2ac961 {{[isCheckLi == index ? 'active' : '']}}">{{x.src}}</view>
+      </view>
+    </view>
+    <view class="_section data-v-0f2ac961 main">
+      <view class="_section data-v-0f2ac961 main-all" hidden="{{!(isCheckLi==0)}}">
+        <view wx:key="index" key="{{index}}" class="_div data-v-0f2ac961 main-cell" wx:for="{{loveAll}}" wx:for-index="index" wx:for-item="x">
+          <view class="_section data-v-0f2ac961">
+            <view wx:if="{{x.aisAon ==0}}" class="_div data-v-0f2ac961 {{[x.mateA == 0 ? 'boy' : '', x.mateA == 1 ? 'girl' : '']}}">{{x.nickA}}</view>
+            <view wx:else class="_div data-v-0f2ac961 {{[x.mateA == 0 ? 'boy' : '', x.mateA == 1 ? 'girl' : '']}}">{{x.nameA}}</view>
+            <view class="_div data-v-0f2ac961"></view>
+            <view class="_div data-v-0f2ac961 {{[x.mateB == 0 ? 'boy' : '', x.mateB == 1 ? 'girl' : '']}}">{{x.nameB}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961"> {{x.loveContent}}
+            <view class="_small data-v-0f2ac961 main-cell-date">{{x.date}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961">
+            <view class="_div data-v-0f2ac961 fa fa-heart-o" bindtap="handleProxy" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}"> {{x.praise}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-paper-plane-o" bindtap="handleProxy" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}"> {{x.guessOk}}/{{x.guessAll}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-comment-o" bindtap="handleProxy" data-eventid="{{'3-'+index}}" data-comkey="{{$k}}"> {{x.comment.length}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="_section data-v-0f2ac961 main-all" hidden="{{!(isCheckLi==1)}}">
+        <view wx:key="index" key="{{index}}" class="_div data-v-0f2ac961 main-cell" wx:for="{{loveNM}}" wx:for-index="index" wx:for-item="x">
+          <view class="_section data-v-0f2ac961">
+            <view class="_div data-v-0f2ac961 anonymity">{{x.nickA}}</view>
+            <view class="_div data-v-0f2ac961"></view>
+            <view class="_div data-v-0f2ac961 anonymity">{{x.nameB}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961"> {{x.loveContent}}
+            <view class="_small data-v-0f2ac961 main-cell-date">{{x.date}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961">
+            <view class="_div data-v-0f2ac961 fa fa-heart-o" bindtap="handleProxy" data-eventid="{{'4-'+index}}" data-comkey="{{$k}}"> {{x.praise}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-paper-plane-o" bindtap="handleProxy" data-eventid="{{'5-'+index}}" data-comkey="{{$k}}"> {{x.guessOk}}/{{x.guessAll}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-comment-o" bindtap="handleProxy" data-eventid="{{'6-'+index}}" data-comkey="{{$k}}"> {{x.comment.length}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="_section data-v-0f2ac961 main-all" hidden="{{!(isCheckLi==2)}}">
+        <view wx:key="index" key="{{index}}" class="_div data-v-0f2ac961 main-cell" wx:for="{{loveSM}}" wx:for-index="index" wx:for-item="x">
+          <view class="_section data-v-0f2ac961">
+            <view class="_div data-v-0f2ac961 {{[x.mateA == 0 ? 'boy' : '', x.mateA == 1 ? 'girl' : '']}}">{{x.nameA}}</view>
+            <view class="_div data-v-0f2ac961"></view>
+            <view class="_div data-v-0f2ac961 {{[x.mateB == 0 ? 'boy' : '', x.mateB == 1 ? 'girl' : '']}}">{{x.nameB}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961"> {{x.loveContent}}
+            <view class="_small data-v-0f2ac961 main-cell-date">{{x.date}}</view>
+          </view>
+          <view class="_section data-v-0f2ac961">
+            <view class="_div data-v-0f2ac961 fa fa-heart-o" bindtap="handleProxy" data-eventid="{{'7-'+index}}" data-comkey="{{$k}}"> {{x.praise}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-paper-plane-o" bindtap="handleProxy" data-eventid="{{'8-'+index}}" data-comkey="{{$k}}"> {{x.guessOk}}/{{x.guessAll}}</view>
+            <view class="_div data-v-0f2ac961 fa fa-comment-o" bindtap="handleProxy" data-eventid="{{'9-'+index}}" data-comkey="{{$k}}"> {{x.comment.length}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{!(isCheckLi==3)}}" class="_section data-v-0f2ac961">
+        <view class="_div data-v-0f2ac961">
+          <view class="_section data-v-0f2ac961 com-cell com-cell-boy">
+            <label class="_label data-v-0f2ac961 com-cell-label com-cell-label-boy">{{msgAll.titleA}}</label>
+            <view class="_p data-v-0f2ac961 nick-a">{{msgAll.nickA}}:</view>
+            <input type="text" class="_input data-v-0f2ac961 nick-input-b" placeholder="{{msgAll.nickAP}}" value="{{postMsg.nickA}}" bindinput="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" />
+            <view class="_p data-v-0f2ac961 name-a">{{msgAll.nameA}}:</view>
+            <input type="text" class="_input data-v-0f2ac961 nick-input-b" placeholder="{{msgAll.nameAP}}" value="{{postMsg.nameA}}" bindinput="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}" />
+            <picker bindchange="handleProxy" value="{{postMsg.mateA}}" range="{{arrayOk}}" data-eventid="{{'12'}}" data-comkey="{{$k}}" class="_picker data-v-0f2ac961">
+              <view class="_view data-v-0f2ac961 picker"> {{msgAll.aisAon}}：{{arrayOk[postMsg.aisAon]}} </view>
+            </picker>
+            <view class="_small data-v-0f2ac961 nick-sm">{{msgAll.look}}</view>
+            <picker bindchange="handleProxy" value="{{postMsg.aisAon}}" range="{{array}}" data-eventid="{{'13'}}" data-comkey="{{$k}}" class="_picker data-v-0f2ac961">
+              <view class="_view data-v-0f2ac961 picker"> {{msgAll.mateA}}：{{array[postMsg.mateA]}} </view>
+            </picker>
+          </view>
+          <view class="_section data-v-0f2ac961 com-cell com-cell-girl">
+            <label class="_label data-v-0f2ac961 com-cell-label com-cell-label-girl">{{msgAll.titleB}}</label>
+            <view class="_p data-v-0f2ac961 name-b">{{msgAll.nameB}}:</view>
+            <input type="text" class="_input data-v-0f2ac961 nick-input-g" placeholder="{{msgAll.nameBP}}" value="{{postMsg.nameB}}" bindinput="handleProxy" data-eventid="{{'14'}}" data-comkey="{{$k}}" />
+            <picker bindchange="handleProxy" value="{{postMsg.mateB}}" range="{{array}}" data-eventid="{{'15'}}" data-comkey="{{$k}}" class="_picker data-v-0f2ac961">
+              <view class="_view data-v-0f2ac961 picker"> {{msgAll.mateB}}：{{array[postMsg.mateB]}} </view>
+            </picker>
+          </view>
+          <view class="_section data-v-0f2ac961 com-cell com-cell-black">
+            <label class="_label data-v-0f2ac961 com-cell-label com-cell-label-black">{{msgAll.titleC}}</label>
+            <view class="_div data-v-0f2ac961 com-div">
+              <textarea name="love" id cols="30" rows="10" value="{{postMsg.loveContent}}" bindinput="handleProxy" class="_textarea data-v-0f2ac961 com-text" data-eventid="{{'16'}}" data-comkey="{{$k}}" />
+            </view>
+          </view>
+          <button class="_button data-v-0f2ac961 com-button" bindtap="handleProxy" data-eventid="{{'17'}}" data-comkey="{{$k}}">{{msgAll.post}}</button>
+        </view>
+      </view>
+    </view>
+    <view class="_section data-v-0f2ac961 footer">
+      <view class="_footer data-v-0f2ac961 footer">© {{msgAll.footer}} 版权所有</view>
+    </view>
+    <view class="_section data-v-0f2ac961 loading" hidden="{{!(isLoading == 1)}}"></view>
+    <view class="_section data-v-0f2ac961 error" hidden="{{!(isErrShow == 1)}}"> {{isErr}} </view>
+    <view class="_section data-v-0f2ac961 black" hidden="{{!(isGuess==1 || isComment==1)}}" bindtap="handleProxy" data-eventid="{{'18'}}" data-comkey="{{$k}}"></view>
+    <view class="_section data-v-0f2ac961 guess" hidden="{{!(isGuess==1)}}">
+      <view class="_h3 data-v-0f2ac961 guess-title">猜一猜</view>
+      <view class="_h5 data-v-0f2ac961 guess-small">已猜中{{guessOk}}次，被猜{{guessAll}}次</view>
+      <input class="_input data-v-0f2ac961 guess-input" type="text" placeholder="猜一猜发起者的名字" value="{{guessName}}" bindinput="handleProxy" data-eventid="{{'19'}}" data-comkey="{{$k}}" />
+      <button class="_button data-v-0f2ac961 guess-button" bindtap="handleProxy" data-eventid="{{'20'}}" data-comkey="{{$k}}">开始猜测</button>
+    </view>
+    <view class="_section data-v-0f2ac961 comment" hidden="{{!(isComment==1)}}">
+      <view class="_h3 data-v-0f2ac961 comment-title">评论</view>
+      <view class="_div data-v-0f2ac961">
+        <view wx:key="index" key="{{index}}" class="_p data-v-0f2ac961 comment-p" wx:for="{{listComment}}" wx:for-index="index" wx:for-item="x">
+          <label class="_span data-v-0f2ac961">第{{index+1}}楼:</label>
+          <label class="_span data-v-0f2ac961">{{x.content}}</label>
+        </view>
+      </view>
+      <input hidden="{{!(listComment.length<10)}}" class="_input data-v-0f2ac961 comment-input" type="text" placeholder="我也要评论" value="{{postComment}}" bindinput="handleProxy" data-eventid="{{'21'}}" data-comkey="{{$k}}" />
+      <input hidden="{{!(listComment.length>=10)}}" class="_input data-v-0f2ac961 comment-input" type="text" value="评论已关闭" disabled="disabled" />
+      <button hidden="{{!(listComment.length<10)}}" class="_button data-v-0f2ac961 comment-button" bindtap="handleProxy" data-eventid="{{'22'}}" data-comkey="{{$k}}">开始评论</button>
+      <button hidden="{{!(listComment.length>=10)}}" class="_button data-v-0f2ac961 comment-button" bindtap="handleProxy" data-eventid="{{'23'}}" data-comkey="{{$k}}">评论已关闭</button>
+    </view>
+    <view class="_section data-v-0f2ac961 control" hidden="{{!(controlShow==1)}}">
+      <view class="_p data-v-0f2ac961">我生君未生，君生我已老。</view>
+      <view class="_p data-v-0f2ac961">我恨君生迟，君叹我生早。</view>
+      <view class="_p data-v-0f2ac961">若得生同时，誓拟与君好。</view>
+      <view class="_p data-v-0f2ac961">年岁不可更，怅惘知多少。</view>
+      <view class="_p data-v-0f2ac961">咫尺似天涯，寸心难相表。</view>
+      <view class="_p data-v-0f2ac961">我生君未生，君生我已老。</view>
+      <view class="_p data-v-0f2ac961">来世愿同生，永作比翼鸟。</view>
+      <view class="_p data-v-0f2ac961">和鸣相伴飞，天涯复海角。</view>
+      <view class="_p data-v-0f2ac961">有日老难飞，互抱栖树杪。</view>
+      <view class="_p data-v-0f2ac961">老死化树藤，情根亦缠绕。</view>
+    </view>
+    <view hidden="{{!(isLoading == 1)}}" class="_section data-v-0f2ac961">
+      <view class="_div data-v-0f2ac961 page">
+        <view class="_div data-v-0f2ac961 circle-loader">
+          <view class="_div data-v-0f2ac961 circle-line">
+            <view class="_div data-v-0f2ac961 circle circle-blue"></view>
+            <view class="_div data-v-0f2ac961 circle circle-blue"></view>
+            <view class="_div data-v-0f2ac961 circle circle-blue"></view>
+          </view>
+          <view class="_div data-v-0f2ac961 circle-line">
+            <view class="_div data-v-0f2ac961 circle circle-yellow"></view>
+            <view class="_div data-v-0f2ac961 circle circle-yellow"></view>
+            <view class="_div data-v-0f2ac961 circle circle-yellow"></view>
+          </view>
+          <view class="_div data-v-0f2ac961 circle-line">
+            <view class="_div data-v-0f2ac961 circle circle-red"></view>
+            <view class="_div data-v-0f2ac961 circle circle-red"></view>
+            <view class="_div data-v-0f2ac961 circle circle-red"></view>
+          </view>
+          <view class="_div data-v-0f2ac961 circle-line">
+            <view class="_div data-v-0f2ac961 circle circle-green"></view>
+            <view class="_div data-v-0f2ac961 circle circle-green"></view>
+            <view class="_div data-v-0f2ac961 circle circle-green"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
